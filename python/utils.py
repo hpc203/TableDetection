@@ -232,7 +232,7 @@ def get_max_adjacent_bbox(mask):
         if len_hull == 4:
             target_box = np.array(hull)
         elif len_hull > 4:
-            target_box = minboundquad(hull)
+            target_box = minboundquad(hull)  ####用shapely库里面的polygon.convex_hull也能做到
         else:
             target_box = np.array(points)
 
